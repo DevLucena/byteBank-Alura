@@ -1,0 +1,25 @@
+<!--esté é o componente principal (PAI), e por ele que vemos os outros componentes-->
+
+<!--(aoTransferir) é um event bind e abrimos com paramentro, o que significa que estamos
+  pegando os dados da classe TS e passando para o HTML-->
+
+<!--o evento (aoTransferir)="transferir($event)" está "escutando (ngSubmit) transferir do HTML
+  nova-transferencia (nesse caso podendo ser click ou enter)"-->
+
+<!--como não é correto recebermos ou tratarmos dados no componente PAI,
+  transferimos essa funçao para os outros dois componentes, e para isso utilizamos o service
+  e desativamos o -->
+
+<!--PAI é onde os outros componentes são carregados, logo os componentes que o utilizam para serem
+carregados, são chamados de filhos-->
+
+<app-nova-transferencia
+  (aoTransferir)="transferir($event)"
+></app-nova-transferencia>
+
+<app-extrato></app-extrato>
+
+<!--<app-extrato [transferencias]="transferencias"></app-extrato>
+essa tag foi comentada, pois o deixamos de utilizar, depois da criação do service
+-->
+

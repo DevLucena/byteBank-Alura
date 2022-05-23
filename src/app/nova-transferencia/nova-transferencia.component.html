@@ -1,0 +1,37 @@
+<!--[ngModel] - Property bind - permite apenas que o que estiver no component (TS), seja repassado ao template (HTML)
+se houver alterações no template (HTML) ela não é refletida para o component (TS)-->
+
+<!--[(ngModel)] -> Two Way Data Bind - Permite que o que for digitado no template (HTML)
+ seja repassado pro componente (TS), ou vice e versa-->
+
+<section class="container">
+  <form class="formulario" (ngSubmit)="transferir()">
+    <h2 clas="formulario__titulo">Nova Transferencia</h2>
+
+    <div class="form-field">
+      <label class="form-field__label" for="valor">Valor</label>
+      <input
+        class="form-field__input"
+        id="valor"
+        type="number"
+        [(ngModel)]="valor"
+        name="valor"
+      />
+    </div>
+
+    <div class="form-field">
+      <label class="form-field__label" for="destino">Destino</label>
+      <input
+        class="form-field__input"
+        id="destino"
+        type="text"
+        [(ngModel)]="destino"
+        name="destino"
+      />
+    </div>
+
+    <div class="botao-wrapper">
+      <button class="botao">Transferir</button>
+    </div>
+  </form>
+</section>
